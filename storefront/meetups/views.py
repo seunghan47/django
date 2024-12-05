@@ -3,4 +3,11 @@ from django.shortcuts import render
 
 # the path is relative to the teamplates directory already
 def index(request):
-    return render(request, 'meetups/index.html')
+    meetups = [
+        { 'title': 'A first meetup'},
+        { 'title': 'A second meetup'},
+    ]
+    return render(request, 'meetups/index.html', {
+        'show_meetups': False,
+        'meetups': meetups
+    })
