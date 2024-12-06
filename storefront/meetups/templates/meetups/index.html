@@ -13,7 +13,10 @@
       rel="stylesheet"
       href="{% static 'meetups/styles/base.css' %}"
     />
-    <link rel="stylesheet" href="{% static "meetups/styles/all-meetups.css" %}">
+    <link
+      rel="stylesheet"
+      href="{% static 'meetups/styles/all-meetups.css' %}"
+    />
   </head>
   <body>
     <header id="main-header">
@@ -48,7 +51,7 @@
               </div>
               <div class="meetup-actions">
                 <a
-                  href=""
+                  href="{% url 'meetup-detail' meet.slug %}"
                   class="btn"
                   >More Details</a
                 >
